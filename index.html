@@ -1,78 +1,239 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>知识库</title>
-    <link rel="stylesheet" href="styles.css"> <!-- 外部样式表 -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f9;
-        }
-        header {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #4CAF50;
-            color: white;
-        }
-        nav {
-            margin-bottom: 20px;
-            background-color: #333;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        main {
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>野生钢铁侠の知识库</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="icon" href="/favicon32.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="/favicon16.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <script src="https://cdn.jsdelivr.net/npm/viz.js@1.8.0/viz.js"></script>
+  <!-- PDFObject.js is a required dependency of this plugin -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script> 
+<!-- docsify-pdf-embed.js  -->
+<script src="//unpkg.com/docsify-pdf-embed-plugin/src/docsify-pdf-embed.js"></script>
+<script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.js"></script>
+<script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.goup.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $.goup({
+      trigger: 100,
+      bottomOffset: 32,
+      locationOffset: 32,
+      title: 'TOP',
+      titleAsText: true
+    });
+  });
+  
+</script>
+<!-- 自定义特色样式：by myself -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/css/me.css">
+
+<style>
+
+    /*滚动条样式 start*/
+    /* 滚动条宽度 */
+    ::-webkit-scrollbar{width:5px;}
+    /* 滚动条颜色 */
+    ::-webkit-scrollbar-thumb{
+      background: #33a9dc;
+      background-image: linear-gradient(#6ecd56, #33a9dc, #cb6196, #c16290);
+      border-radius: 2em;
+    }
+
+  </style>
+
+
 </head>
+
 <body>
-    <header>
-        <h1>知识库</h1>
-    </header>
-    <nav>
-        <a href="#section1">概述</a>
-        <a href="#section2">文章</a>
-        <a href="#section3">资源</a>
-        <a href="#section4">关于我们</a>
-    </nav>
-    <main>
-        <section id="section1">
-            <h2>概述</h2>
-            <p>欢迎来到我们的知识库，这里汇集了各种有用的信息和学习资源。</p>
-        </section>
-        <section id="section2">
-            <h2>文章</h2>
-            <p>在此版块，你将找到最新的文章和教程，帮助你深入理解和学习新知识。</p>
-        </section>
-        <section id="section3">
-            <h2>资源</h2>
-            <p>各种有用的外部链接和工具，助你学习与应用。</p>
-        </section>
-        <section id="section4">
-            <h2>关于我们</h2>
-            <p>我们的知识库致力于为用户提供最佳的学习和信息共享平台。</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 知识库. 版权所有.</p>
-    </footer>
+  <div id="app">保持热爱，奔赴星海。</div>
+  
+
+  <!-- 回到顶部功能 -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/jquery.goup.js"></script>
+
+
+  
+  <script>
+    window.$docsify = {
+      name: '野生钢铁侠の知识库',
+      repo: 'https://github.com/happymrli',   
+      loadSidebar: true,
+      loadNavbar: true,
+      maxLevel: 5,
+      subMaxLevel: 1,
+      mergeNavbar: true,
+      coverpage: true,
+      loadNavbar: true,
+      
+      search: {
+        paths: 'auto',
+        placeholder: '🔍  Search',
+        noData: '未匹配到结果',
+        // Headline depth, 1 - 6
+        depth: 6,
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      },//添加搜索框
+
+   
+      
+ 
+
+
+      markdown: {
+        renderer: {
+          code: function(code, lang) {
+            if (lang === "dot") {
+              return (
+                      '<div class="viz">'+ Viz(code, "SVG")+'</div>'
+              );
+            }
+            return this.origin.code.apply(this, arguments);
+          }
+        }
+      },
+
+
+      markdown: {
+        renderer: {
+          code: function(code, lang, base=null) {
+
+            /* if (lang === "dot") {
+              return (
+                      '<div class="viz">'+ Viz(code, "SVG")+'</div>'
+              );
+            } */
+
+            var pdf_renderer = function(code, lang, verify) {
+              function unique_id_generator(){
+                function rand_gen(){
+                  return Math.floor((Math.random()+1) * 65536).toString(16).substring(1);
+                }
+                return rand_gen() + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + '-' + rand_gen() + rand_gen() + rand_gen();
+              }
+              if(lang && !lang.localeCompare('pdf', 'en', {sensitivity: 'base'})){
+                if(verify){
+                  return true;
+                }else{
+                  var divId = "markdown_code_pdf_container_" + unique_id_generator().toString();
+                  var container_list = new Array();
+                  if(localStorage.getItem('pdf_container_list')){
+                    container_list = JSON.parse(localStorage.getItem('pdf_container_list'));
+                  }
+                  container_list.push({"pdf_location": code, "div_id": divId});
+                  localStorage.setItem('pdf_container_list', JSON.stringify(container_list));
+                  return (
+                          '<div style="margin-top:'+ PDF_MARGIN_TOP +'; margin-bottom:'+ PDF_MARGIN_BOTTOM +';" id="'+ divId +'">'
+                          + '<a href="'+ code + '"> Link </a> to ' + code +
+                          '</div>'
+                  );
+                }
+              }
+              return false;
+            }
+            if(pdf_renderer(code, lang, true)){
+              return pdf_renderer(code, lang, false);
+            }
+            //return this.origin.code.apply(this, arguments);
+            return (base ? base : this.origin.code.apply(this, arguments));
+          }
+        }
+      }
+
+/*
+      plugins: [
+        function (hook, vm) {        
+          hook.beforeEach(function(content) {
+            var comment = "<div id='lv-container' data-id='city' data-uid='MTAyMC80MzA4MC8xOTYyNg=='></div>\n\n----\n"
+            return content + comment;
+          });
+          hook.doneEach(function() {
+            (function(d, s) {
+              var j, e = d.getElementsByTagName(s)[0];
+              if (typeof LivereTower === 'function') { return; }
+              j = d.createElement(s);
+              j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+              j.async = true;
+              e.parentNode.insertBefore(j, e);              
+            })(document, 'script');
+          });
+        },    
+      ]
+*/   
+
+    }
+    
+  </script>
+
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- 添加 PDF 页面展示功能 -->
+  <!-- PDFObject.js is a required dependency of this plugin -->
+  <!--<script src="//cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js"></script>-->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/pdfobject.min.js"></script>
+  <!-- This is the source code of the pdf embed plugin -->
+  <script src="https://cdn.jsdelivr.net/gh/wugenqiang/NoteBook@master/plugin/docsify-pdf-embed.js"></script>
+  <!-- Latest -->
+<script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+<!-- 访问量统计 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <!-- mouse click -->
+  <script src="//cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/js/click_heart.js"></script>
+  <!-- emoji表情支持 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 图片放大缩小支持 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $.goup({
+        trigger: 100,
+        bottomOffset: 16,
+        locationOffset: 32,
+        title: 'TOP',
+        titleAsText: true
+      });
+    });
+  </script>
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+  <script>
+    L2Dwidget.init({
+      "model": {
+        //jsonpath控制显示那个小萝莉模型，
+        //(切换模型需要改动)
+        jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+        "scale": 1
+      },
+      "display": {
+        "position": "right", //看板娘的表现位置
+        "width": 70,  //小萝莉的宽度
+        "height": 140, //小萝莉的高度
+        "hOffset": 60,
+        "vOffset": 0
+      },
+      "mobile": {
+        "show": true,
+        "scale": 0.5
+      },
+      "react": {
+        "opacityDefault": 0.7,
+        "opacityOnHover": 0.2
+      }
+    });
+  </script>
+  
+<script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.js"></script>
+<script src="https://wugenqiang.github.io/CS-Notes/plugin/jquery.goup.js"></script>
 </body>
+
 </html>
