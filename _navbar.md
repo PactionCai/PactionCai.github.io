@@ -1,5 +1,9 @@
 - [***哔哩哔哩***](https://www.bilibili.com/)
 
+- **综合**
+  - [**OpenAI**](https://chatgpt.com/)
+  - [**原作者**](https://github.com/happymrli)
+
 - **脚本**
   - [**GreasyFork**](https://greasyfork.org/zh-CN/scripts?q=)
   - [**Tampermonkey**](https://www.tampermonkey.net/)
@@ -56,27 +60,9 @@
   - [**今日头条**](https://www.toutiao.com/)
   - [**西瓜视频**](https://www.ixigua.com/)
 
-- **划水**
-
-  - [**4399**](http://www.4399.com/)
-  - [**7K7K**](http://www.7k7k.com/)
-
 - **程序猿·广度**
 
   - [**尚硅谷**](http://www.atguigu.com/)
   - [**黑马程序员**](http://www.itheima.com/)
-
-- **焊武帝·深度**
-
-  - [**全国大学生电子设计竞赛培训网**](https://www.nuedc-training.com.cn/)
-
-- **友情链接**
-
-  - [**WeiBo**](https://weibo.com/u/7464024291)
-  - [**Bilibili**](https://space.bilibili.com/629004933)
-  - [**CSDN**](https://blog.csdn.net/weixin_51460407)
-  - **[Gitee](https://gitee.com/redamancy785)**
-  - [**今日头条**](https://www.toutiao.com/c/user/token/MS4wLjABAAAATetYsKx5ltYrGCleC17q6YEveJEd18RvhE4Qpylwm9KbjXThfi_M337_48X95DBn)
-  
-  
-
+  - [**GitHub**](https://github.com/)
+  - [**Gitee**](https://gitee.com)

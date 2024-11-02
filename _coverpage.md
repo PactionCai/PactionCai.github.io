@@ -2,5 +2,4 @@
 
 ## 在不动声色的日子里,遇见你真好
 
-[***Redemancy785's Blog***](https://happymrli.github.io/)
 [**开启探索之旅**](README.md)
